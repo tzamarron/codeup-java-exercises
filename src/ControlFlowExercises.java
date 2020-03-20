@@ -19,18 +19,19 @@ public class ControlFlowExercises {
 //            System.out.printf("%d\n",i);
 //            i+=2;
 //        } while(i<=100);
-
+//
 //        int i = 100;
 //        do{
 //            System.out.printf("%d\n",i);
 //            i-=5;
 //        } while(i >= -10);
-
-//        int i = 2;
+//
+//        long i = 2;
 //        do{
 //            System.out.println(i);
 //            i = (int) Math.pow(i, 2);
-//        } while(i<=1_000_000);
+//            System.out.println(i);
+//        } while(i <= 1_000_000);
 
         // C ---
         // do while #1
@@ -98,49 +99,52 @@ public class ControlFlowExercises {
 //        } while (isTrue);
 
         // Exercise 4 ----- Grades
-        System.out.print("Enter a number grade: ");
-        // Sets number to variable
-        int userGrade = input.nextInt();
-
-        // Set Variables
-        boolean isTrue;
-        String userConfirm;
-
-        // Determine Letter Grade
-        do{
-            if (userGrade >= 94 && userGrade <= 100) {
-                System.out.println("A+");
-            } else if (userGrade >= 88){
-                System.out.println("A-");
-
-            } else if (userGrade >= 84){
-                System.out.println("B+");
-            } else if (userGrade >= 80) {
-                System.out.println("B-");
-
-            } else if (userGrade >= 73){
-                System.out.println("C+");
-            } else if (userGrade >= 67){
-                System.out.println("C-");
-
-            } else if (userGrade >= 63){
-                System.out.println("D+");
-            } else if (userGrade >= 60){
-                System.out.println("D-");
-
-            } else {
-                System.out.println('F');
-            }
-            System.out.print("Do you want to continue? [y/n] ");
-            userConfirm = input.next();
-
-            isTrue = userConfirm.equalsIgnoreCase("y");
-            if(isTrue) {
-                System.out.print("Enter a number grade: ");
-                userGrade = input.nextInt();
-            }
-
-        } while(isTrue);
+//        System.out.print("Enter a number grade: ");
+//        // Sets number to variable
+//        int userGrade = input.nextInt();
+//
+//        // Set Variables
+//        boolean isTrue;
+//        String userConfirm;
+//
+//        // Determine Letter Grade
+//        do{
+//            if (userGrade >= 94 && userGrade <= 100) {
+//                System.out.println("A+");
+//            } else if (userGrade >= 88){
+//                System.out.println("A-");
+//
+//            } else if (userGrade >= 84){
+//                System.out.println("B+");
+//            } else if (userGrade >= 80) {
+//                System.out.println("B-");
+//
+//            } else if (userGrade >= 73){
+//                System.out.println("C+");
+//            } else if (userGrade >= 67){
+//                System.out.println("C-");
+//
+//            } else if (userGrade >= 63){
+//                System.out.println("D+");
+//            } else if (userGrade >= 60){
+//                System.out.println("D-");
+//
+//            } else {
+//                System.out.println('F');
+//            }
+//            // Confirm user wants to continue
+//            System.out.print("Do you want to continue? [y/n] ");
+//            // Store user answer to variable
+//            userConfirm = input.next();
+//            // True to false confirmation based on user response and setting it to variable
+//            isTrue = userConfirm.equalsIgnoreCase("y");
+//
+//            if(isTrue) {
+//                System.out.print("Enter a number grade: ");
+//                userGrade = input.nextInt();
+//            }
+//
+//        } while(isTrue);
 
 
 
