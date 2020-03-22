@@ -24,6 +24,7 @@ public class MethodsExercises {
 //        }
 //        return result;
 
+        // Using recursion
         // if num1 is less than
         // num2 swap the numbers
         if (num1 < num2) {
@@ -58,18 +59,31 @@ public class MethodsExercises {
 
     public static long factorial(long num){
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
-        long userNum = input.nextLong();
-        long result = 1;
-        // Verify user number is valid
-        if (userNum >= 1 && userNum <= 10){
-            for (long i = 1; i<= userNum; i++){
-                result *= i;
-            }
-            System.out.println(result);
-            return result;
+        // Normal
+//        long result = 1;
+//        // Verify user number is valid
+//        if (num >= 1 && num <= 20){
+//            for (long i = 1; i<= num; i++){
+//                result *= i;
+//            }
+//            System.out.printf("%d! is %d",num,result);
+//            return result;
+//        } else {
+//            System.out.print("Enter a number between 1 and 20: ");
+//            long userNum = input.nextLong();
+//            return factorial(userNum);
+//        }
+
+        // Using Recursion
+        if (num >= 1 && num <= 20){
+            return (num * (factorial(num - 1)));
+        } else if (num != 0){
+            System.out.print("Please enter a number between 0 and 20: ");
+            long userNum = input.nextLong();
+            return factorial(userNum);
+        } else {
+            return 1;
         }
-        return factorial(num);
 
     }
 
@@ -80,7 +94,8 @@ public class MethodsExercises {
 //        System.out.printf("%d times %d is %d\n",5,10,multiplyNums(5,10));
 //        System.out.printf("%d modulus %d is %d\n",10,5,modulusNum(10,5));
 //        getInteger(1,10);
-        factorial(5);
+//        factorial(20);
+//        System.out.print(factorial(21));
 
     }
 
