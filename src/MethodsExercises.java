@@ -1,4 +1,7 @@
+import java.io.PrintStream;
 import java.util.Scanner;
+
+import static java.lang.Integer.parseInt;
 
 public class MethodsExercises {
 
@@ -49,6 +52,7 @@ public class MethodsExercises {
         Scanner input = new Scanner(System.in);
         System.out.printf("Enter a number between %d and %d: ",min, max);
         int userNum = input.nextInt();
+
         if (userNum >= min && userNum <= max){
             System.out.print("Thanks for playing!");
             return userNum;
@@ -87,6 +91,31 @@ public class MethodsExercises {
 
     }
 
+    public static String diceRoll(int num1){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Ready to roll the dice? [y/n] "); // Confirm they are ready to roll
+        String readyToRoll = input.nextLine(); // Set user input to variable
+
+        if (!readyToRoll.equalsIgnoreCase("y")){ // If they choose anything beside "y"
+            System.out.println("Did you need more time or do you want different dice [d]?"); // Ask if they want to select a different num or more time
+            String whyWait = input.nextLine(); // Store input to variable
+            if (whyWait.equalsIgnoreCase("d")){ // If user wants to chose new dice
+                System.out.print("Please select your desired dice size.\n Size of Dice: "); // Ask them to enter new value for dice
+                return diceRoll( parseInt( input.nextLine()));// Use new value in function
+            } else {// If user wants more time
+                System.out.println("Roll when ready"); // Inform user to roll when ready
+                return diceRoll(num1);// Start function over
+            }
+
+        } else {// If they are ready to roll
+            int die1 = (int) Math.floor(Math.random()* num1)+1;
+            int die2 = (int) Math.floor(Math.random()* num1)+1;
+            int total = die1 + die2;
+            return "*Throws dice*\n *Die 1 shows:" + die1 + "\n *Die 2 shows: " + die2 + "*\n " + total + "!";
+        }
+    }
+
     public static void main(String[] args){
 //        System.out.printf("%d plus %d is %d\n",5,10,addNums(5,10));
 //        System.out.printf("%d subtracted %d is %d\n",10,5,subtractNums(10,5));
@@ -95,11 +124,9 @@ public class MethodsExercises {
 //        System.out.printf("%d modulus %d is %d\n",10,5,modulusNum(10,5));
 //        getInteger(1,10);
 //        factorial(20);
-//        System.out.print(factorial(21));
+//        System.out.print(factorial(20));
+        System.out.print(diceRoll(6));
 
     }
-
-
-
 
 }

@@ -7,7 +7,7 @@ public class ControlFlowExercises {
 
         // A ---- while loop
 //        int i = 5;
-//        while (i < 15){
+//        while (i <= 15){
 //            System.out.printf("%d ",i);
 //            i++;
 //        }
@@ -82,7 +82,7 @@ public class ControlFlowExercises {
 //                int cubed = (int) Math.pow(i, 3);
 //
 //                // Prints current iteration
-//                System.out.printf("%-6d | %-7d | %-5d\n", i, squared, cubed);
+//                System.out.printf("%-6d | %-7d | %d\n", i, squared, cubed);
 //            }
 //            // After loop asks user if they want to continue
 //            System.out.print("Do you want to continue? [y/n]");
