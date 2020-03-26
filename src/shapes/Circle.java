@@ -2,21 +2,13 @@ package shapes;
 
 public class Circle {
     private double radius;
-    private static long numberOfCircles;
-
-    public Circle(String name){};
-
-    public static long getNumberOfCircles() {
-        return numberOfCircles;
-    }
 
     public Circle (double radius){
         this.radius = radius;
-        numberOfCircles++;
     }
 
     public Circle(){
-        numberOfCircles++;
+
     }
 
     public void setRadius(double radius) {
