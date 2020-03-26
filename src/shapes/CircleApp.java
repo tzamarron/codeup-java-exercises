@@ -10,8 +10,10 @@ public class CircleApp {
         boolean wantsToContinue; // creates boolean
 
         // a loop that prompts user to define the radius of a newly created circle
-        // once defined they number of circles is increased
-        // the area and
+        // once defined the number of circles is increased
+        // the area and the circumference is shown for the circle
+        // user is then prompted if they wish to create another circle
+        // If yes then loop is repeated, if no then loop is ended
         do {
             System.out.print("What is the radius of your circle?\nRadius: ");
             Circle newCircle = new Circle(input.getDouble());
@@ -21,6 +23,8 @@ public class CircleApp {
 
             wantsToContinue = input.yesNo("Do you want to create another circle? [y/n]");
         } while (wantsToContinue);
+
+        // After loop has ended total number of circles is shown
         System.out.print(numberOfCircles + " circle(s) was created.");
     }
 }
