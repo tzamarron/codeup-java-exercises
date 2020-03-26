@@ -2,40 +2,42 @@ package util;
 
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
-
 public class Input {
-    private static Scanner scanner;
-    public static void setScanner(Scanner input) {
-        scanner = input;
-    }
+    private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.print("Enter a string: ");
         return scanner.nextLine();
     }
 
     public String getString(String prompt) {
-        System.out.print("Enter a string: ");
         System.out.printf("\n%s\n",prompt);
         return scanner.nextLine();
     }
 
     public boolean yesNo(){
-        System.out.println("Yes?");
-        String isConfirmed = scanner.nextLine();
-        return isConfirmed.equalsIgnoreCase("yes");
+        char response = scanner.next().toLowerCase().charAt(0);
+        if (Character.compare(response,'y') == 0) {
+            return true;
+        } else if (Character.compare(response,'n') == 0) {
+            return false;
+        } else {
+            return yesNo();
+        }
     }
 
     public boolean yesNo(String prompt){
-        System.out.println("Yes?");
-        String isConfirmed = scanner.nextLine();
         System.out.printf("\n %s \n",prompt);
-        return isConfirmed.equalsIgnoreCase("yes");
+        char response = scanner.next().toLowerCase().charAt(0);
+        if (Character.compare(response,'y') == 0) {
+            return true;
+        } else if (Character.compare(response,'n') == 0) {
+            return false;
+        } else {
+            return yesNo();
+        }
     }
 
-    int getInt(int min, int max){
-        System.out.printf("Enter a number between %d and %d: ",min, max);
+    public int getInt(int min, int max){
         int userNumber = scanner.nextInt();
         if (userNumber >= min && userNumber <= max){
             return userNumber;
@@ -45,11 +47,10 @@ public class Input {
         }
     }
 
-    int getInt(int min, int max, String prompt){
-        System.out.printf("Enter a number between %d and %d: ",min, max);
+    public int getInt(int min, int max, String prompt){
+        System.out.printf("\n%s\n",prompt);
         int userNumber = scanner.nextInt();
         if (userNumber >= min && userNumber <= max){
-            System.out.printf("\n%s\n",prompt);
             return userNumber;
         } else {
             System.out.printf("That is not a number between %d and %d\n",min,max);
@@ -57,19 +58,27 @@ public class Input {
         }
     }
 
-    int getInt(){
-        System.out.print("Enter a Interger: ");
+    public int getInt(){
         return scanner.nextInt();
     }
 
-    int getInt(String prompt){
-        System.out.print("Enter a Interger: ");
+    public int getInt(String prompt){
         System.out.printf("\n%s\n",prompt);
         return scanner.nextInt();
     }
 
-    double getDouble(double min, double max){
-        System.out.printf("Enter a decimal number between %d and %d",min,max);
+    public double getDouble(double min, double max){
+        double userNumber = scanner.nextDouble();
+        if (userNumber >= min && userNumber <= max){
+            return userNumber;
+        } else {
+            System.out.printf("That is not a number between %f and %f\n",min,max);
+            return getDouble(min,max);
+        }
+    }
+
+    public double getDouble(double min, double max,String prompt){
+        System.out.printf("\n%s\n",prompt);
         double userNumber = scanner.nextDouble();
         if (userNumber >= min && userNumber <= max){
             return userNumber;
@@ -79,32 +88,16 @@ public class Input {
         }
     }
 
-    double getDouble(double min, double max,String prompt){
-        System.out.printf("Enter a decimal number between %d and %d",min,max);
-        double userNumber = scanner.nextDouble();
-        if (userNumber >= min && userNumber <= max){
-            System.out.printf("\n%s\n",prompt);
-            return userNumber;
-        } else {
-            System.out.printf("That is not a number between %d and %d\n",min,max);
-            return getDouble(min,max);
-        }
-    }
-
-    double getDouble(){
-        System.out.println("Enter a decimal number: ");
+    public double getDouble(){
         return scanner.nextDouble();
     }
 
-    double getDouble(String prompt){
-        System.out.println("Enter a decimal number: ");
+    public double getDouble(String prompt){
         System.out.printf("\n%s\n",prompt);
         return scanner.nextDouble();
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        setScanner(scanner);
         Input test = new Input();
 //        System.out.println(test.getString());
 //        System.out.println(test.yesNo());
