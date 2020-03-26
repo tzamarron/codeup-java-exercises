@@ -3,108 +3,129 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in); // Creates Scanner for class
 
+    // Method will capture string input and return it
     public String getString() {
         return scanner.nextLine();
     }
 
+    // Using provided prompt method will then
+    // capture and return string input
     public String getString(String prompt) {
-        System.out.printf("\n%s\n",prompt);
+        System.out.printf("\n%s\n", prompt);
         return scanner.nextLine();
     }
 
-    public boolean yesNo(){
-        char response = scanner.next().toLowerCase().charAt(0);
-        if (Character.compare(response,'y') == 0) {
+    // Method will capture the first character of the input provided.
+    // Confirms it is a 'y' or 'n' else waits for correct input
+    // then returns a boolean
+    public boolean yesNo() {
+        char response = scanner.next().trim().toLowerCase().charAt(0);
+        if (Character.compare(response, 'y') == 0) {
             return true;
-        } else if (Character.compare(response,'n') == 0) {
+        } else if (Character.compare(response, 'n') == 0) {
             return false;
         } else {
             return yesNo();
         }
     }
 
-    public boolean yesNo(String prompt){
-        System.out.printf("\n %s \n",prompt);
-        char response = scanner.next().toLowerCase().charAt(0);
-        if (Character.compare(response,'y') == 0) {
+    // Shows given prompt first then method
+    // capture the first character of the input provided
+    // Confirms it is a 'y' or 'n' else waits for correct input
+    // then returns a boolean
+    public boolean yesNo(String prompt) {
+        System.out.printf("\n %s \n", prompt);
+        String response = scanner.nextLine().toLowerCase().trim();
+        if (response.startsWith("y")) {
             return true;
-        } else if (Character.compare(response,'n') == 0) {
+        } else if (response.startsWith("n")) {
             return false;
         } else {
             return yesNo();
         }
     }
 
-    public int getInt(int min, int max){
+    // Method captures integer input
+    // then returns integer if with range of
+    // min and max else prompts for correct
+    // integer
+    public int getInt(int min, int max) {
         int userNumber = scanner.nextInt();
-        if (userNumber >= min && userNumber <= max){
+        if (userNumber >= min && userNumber <= max) {
             return userNumber;
         } else {
-            System.out.printf("That is not a number between %d and %d\n",min,max);
-            return getInt(min,max);
+            System.out.printf("That is not a number between %d and %d\n", min, max);
+            return getInt(min, max);
         }
     }
 
-    public int getInt(int min, int max, String prompt){
-        System.out.printf("\n%s\n",prompt);
+    // Method will capture integer input
+    // then returns integer if with range of
+    // min and max else prompts for correct
+    // integer
+    public int getInt(int min, int max, String prompt) {
+        System.out.printf("\n%s\n", prompt);
         int userNumber = scanner.nextInt();
-        if (userNumber >= min && userNumber <= max){
+        if (userNumber >= min && userNumber <= max) {
             return userNumber;
         } else {
-            System.out.printf("That is not a number between %d and %d\n",min,max);
-            return getInt(min,max);
+            System.out.printf("That is not a number between %d and %d\n", min, max);
+            return getInt(min, max);
         }
     }
 
-    public int getInt(){
+    // Method captures and return integer
+    public int getInt() {
         return scanner.nextInt();
     }
 
-    public int getInt(String prompt){
-        System.out.printf("\n%s\n",prompt);
+    // Using provided prompt Method wil capture and return integer
+    public int getInt(String prompt) {
+        System.out.printf("\n%s\n", prompt);
         return scanner.nextInt();
     }
 
-    public double getDouble(double min, double max){
+    // Method will capture and return double if
+    // with range of min and max else prompts
+    // for correct integer
+    public double getDouble(double min, double max) {
         double userNumber = scanner.nextDouble();
-        if (userNumber >= min && userNumber <= max){
+        if (userNumber >= min && userNumber <= max) {
             return userNumber;
         } else {
-            System.out.printf("That is not a number between %f and %f\n",min,max);
-            return getDouble(min,max);
+            System.out.printf("That is not a number between %f and %f\n", min, max);
+            return getDouble(min, max);
         }
     }
 
-    public double getDouble(double min, double max,String prompt){
-        System.out.printf("\n%s\n",prompt);
+    // Using provided prompt method will
+    // capture and return double if within
+    // range of min and max else prompts
+    // for correct integer
+    public double getDouble(double min, double max, String prompt) {
+        System.out.printf("\n%s\n", prompt);
         double userNumber = scanner.nextDouble();
-        if (userNumber >= min && userNumber <= max){
+        if (userNumber >= min && userNumber <= max) {
             return userNumber;
         } else {
-            System.out.printf("That is not a number between %d and %d\n",min,max);
-            return getDouble(min,max);
+            System.out.printf("That is not a number between %d and %d\n", min, max);
+            return getDouble(min, max);
         }
     }
 
-    public double getDouble(){
+    // Method will capture and return double
+    public double getDouble() {
         return scanner.nextDouble();
     }
 
-    public double getDouble(String prompt){
-        System.out.printf("\n%s\n",prompt);
+    // Using provided prompt method will capture
+    // and return provided double
+    public double getDouble(String prompt) {
+        System.out.printf("\n%s\n", prompt);
         return scanner.nextDouble();
     }
 
-    public static void main(String[] args) {
-        Input test = new Input();
-//        System.out.println(test.getString());
-//        System.out.println(test.yesNo());
-//        System.out.println( test.getInt(1,20) );
-//        System.out.println(test.getInt());
-//        System.out.println(test.getDouble(1.5,5.7));
-//        System.out.println(test.getDouble());
 
-    }
 }

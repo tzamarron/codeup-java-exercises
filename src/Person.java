@@ -1,39 +1,41 @@
 public class Person {
-    private String name;
-    public static long numberOfPeople;
+    private String name; // Person has name property
+    public static long numberOfPeople; // Tracks number of people created
 
+    // Constructor accepts name
     public Person(String personName) {
-        name = personName;
-        numberOfPeople++;
+        name = personName; // Places given name to created person's name property
+        numberOfPeople++; // Increase people created
     }
 
-    // returns the person's name
-    public String getName(){
+    // Returns the person's name
+    public String getName() {
         return this.name;
-    };
+    }
 
-    // changes the name property to the passed value
-    public void setName(String newName){
+    // Changes the name property to the passed value
+    public void setName(String newName) {
         name = newName;
-    };
+    }
 
-    // prints a message to the console using the person's name
-    public void sayHello(){
-        System.out.printf("Hello my name is %s\n",name);
-    };
+    // Prints a message to the console using the person's name
+    public void sayHello() {
+        System.out.printf("Hello my name is %s\n", name);
+    }
 
+    // Getter used to get the number of people created
     public static long getNumberOfPeople() {
         return numberOfPeople;
     }
 
-    public static void main (String [] args){
-//        System.out.println(getNumberOfPeople());
-//        Person ted = new Person("Ted");
-//        System.out.println(getNumberOfPeople());
-//        System.out.println(ted.getName());
-//        ted.sayHello();
-//        ted.setName("Theo");
-//        ted.sayHello();
+    public static void main(String[] args) {
+//        System.out.println(getNumberOfPeople()); // Shows number of people before is 0
+//        Person person1 = new Person("Ted"); // Creates person1 with name property of Ted
+//        System.out.println(getNumberOfPeople()); // Shows number of people has increased
+//        System.out.println(person1.getName()); // returns person1 name property value
+//        person1.sayHello(); // Has person1 say hello
+//        person1.setName("Theo"); // Changes name property for person1
+//        person1.sayHello(); // Has person1 say hello after name property has been changed
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
