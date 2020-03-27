@@ -29,13 +29,13 @@ public class Person {
     }
 
     public static void main(String[] args) {
-//        System.out.println(getNumberOfPeople()); // Shows number of people before is 0
-//        Person person1 = new Person("Ted"); // Creates person1 with name property of Ted
-//        System.out.println(getNumberOfPeople()); // Shows number of people has increased
-//        System.out.println(person1.getName()); // returns person1 name property value
-//        person1.sayHello(); // Has person1 say hello
-//        person1.setName("Theo"); // Changes name property for person1
-//        person1.sayHello(); // Has person1 say hello after name property has been changed
+        System.out.println(getNumberOfPeople()); // Shows number of people before is 0
+        Person person1 = new Person("Ted"); // Creates person1 with name property of Ted
+        System.out.println(getNumberOfPeople()); // Shows number of people has increased
+        System.out.println(person1.getName()); // returns person1 name property value
+        person1.sayHello(); // Has person1 say hello
+        person1.setName("Theo"); // Changes name property for person1
+        person1.sayHello(); // Has person1 say hello after name property has been changed
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
