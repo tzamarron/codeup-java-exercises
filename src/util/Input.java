@@ -127,5 +127,11 @@ public class Input {
         return scanner.nextDouble();
     }
 
+    // Method to check is a string is null or Empty
+    // returns boolean
+    public boolean isNullOrEmpty(String str) {
+        return str == null || str.isEmpty();
+    }
+
 
 }
