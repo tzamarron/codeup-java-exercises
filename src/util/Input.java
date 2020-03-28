@@ -13,7 +13,7 @@ public class Input {
     // Using provided prompt method will then
     // capture and return string input
     public String getString(String prompt) {
-        System.out.printf("\n%s\n", prompt);
+        System.out.printf("\n%s", prompt);
         return scanner.nextLine();
     }
 
@@ -36,7 +36,7 @@ public class Input {
     // Confirms it is a 'y' or 'n' else waits for correct input
     // then returns a boolean
     public boolean yesNo(String prompt) {
-        System.out.printf("\n %s \n", prompt);
+        System.out.printf("\n %s", prompt);
         String response = scanner.nextLine().toLowerCase().trim();
         if (response.startsWith("y")) {
             return true;
@@ -66,7 +66,7 @@ public class Input {
     // min and max else prompts for correct
     // integer
     public int getInt(int min, int max, String prompt) {
-        System.out.printf("\n%s\n", prompt);
+        System.out.printf("\n%s", prompt);
         int userNumber = scanner.nextInt();
         if (userNumber >= min && userNumber <= max) {
             return userNumber;
@@ -83,7 +83,7 @@ public class Input {
 
     // Using provided prompt Method wil capture and return integer
     public int getInt(String prompt) {
-        System.out.printf("\n%s\n", prompt);
+        System.out.printf("\n%s", prompt);
         return scanner.nextInt();
     }
 
@@ -105,7 +105,7 @@ public class Input {
     // range of min and max else prompts
     // for correct integer
     public double getDouble(double min, double max, String prompt) {
-        System.out.printf("\n%s\n", prompt);
+        System.out.printf("\n%s", prompt);
         double userNumber = scanner.nextDouble();
         if (userNumber >= min && userNumber <= max) {
             return userNumber;
@@ -123,7 +123,7 @@ public class Input {
     // Using provided prompt method will capture
     // and return provided double
     public double getDouble(String prompt) {
-        System.out.printf("\n%s\n", prompt);
+        System.out.printf("\n%s", prompt);
         return scanner.nextDouble();
     }
 

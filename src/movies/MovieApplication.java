@@ -2,8 +2,6 @@ package movies;
 
 import util.Input;
 
-import javax.swing.*;
-
 public class MovieApplication {
 
     public static void main(String[] args) {
@@ -36,6 +34,7 @@ public class MovieApplication {
                 // User wants to exit
                 case 0:
                     willContinue = false;
+                    break;
                 case 1:
                     // Display all Movies
                     refMovie.listMovie(movieList,"");
@@ -43,14 +42,18 @@ public class MovieApplication {
                 case 2:
                     // User wants to filter movies
                     // Ask user to pick from categories
-                    System.out.println("Which category do you want to see movies from: ");
-                    System.out.println();
+                    input.getString("Current Movie Categories: " + refMovie.sortedMovieCategories(movieList) + "\nWhich category do you want to see movies from: \n");
+                    String userCategory = input.getString();
+                    refMovie.listMovie(movieList,userCategory);
                     break;
                 default:
-                    Movie usermovie = new Movie(
-                            input.getString("Enter movie title : "),
-                            input.getString("Enter movie category : "));
+                    input.getString("Enter movie title : ");
+                    String newTitle = input.getString();
+                    String newCategory = input.getString("Enter movie category : ");
+//                    String newCategory = input.getString();
+                    Movie usermovie = new Movie(newTitle,newCategory);
                     movieList = refMovie.addMovie(movieList, usermovie);
+                    System.out.println("Your movie has been added!");
                     break;
             }
         } while (willContinue);

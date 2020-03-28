@@ -1,5 +1,7 @@
 package movies;
 
+import java.util.Arrays;
+
 public class MoviesArray {
     public static Movie[] findAll() {
         return new Movie[]{
@@ -105,4 +107,5 @@ public class MoviesArray {
             new Movie("Yankee Doodle Dandy", "musical")
         };
     }
+
 }
