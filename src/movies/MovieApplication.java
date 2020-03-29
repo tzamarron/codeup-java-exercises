@@ -27,7 +27,7 @@ public class MovieApplication {
                     "\t3 - add a movie\n");
 
             // Ask user for their choice and capture it
-            int userChoice = input.getInt(0,6,"Enter your choice: ");
+            int userChoice = input.getInt(0, 6, "Enter your choice: ");
             System.out.println(); // Buffer between lines
             // Determines what to do based on userChoice
             switch (userChoice) {
@@ -37,21 +37,21 @@ public class MovieApplication {
                     break;
                 case 1:
                     // Display all Movies
-                    refMovie.listMovie(movieList,"");
+                    refMovie.listMovie(movieList, "");
                     break;
                 case 2:
                     // User wants to filter movies
                     // Ask user to pick from categories
                     input.getString("Current Movie Categories: " + refMovie.sortedMovieCategories(movieList) + "\nWhich category do you want to see movies from: \n");
                     String userCategory = input.getString();
-                    refMovie.listMovie(movieList,userCategory);
+                    refMovie.listMovie(movieList, userCategory);
                     break;
                 default:
                     input.getString("Enter movie title : ");
                     String newTitle = input.getString();
                     String newCategory = input.getString("Enter movie category : ");
 //                    String newCategory = input.getString();
-                    Movie usermovie = new Movie(newTitle,newCategory);
+                    Movie usermovie = new Movie(newTitle, newCategory);
                     movieList = refMovie.addMovie(movieList, usermovie);
                     System.out.println("Your movie has been added!");
                     break;

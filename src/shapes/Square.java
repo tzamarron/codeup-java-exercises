@@ -1,11 +1,8 @@
 package shapes;
 
-public class Square extends Rectangle{
-    protected double length;
-    protected double width;
+public class Square extends Rectangle {
 
-
-    public Square(long side) {
-        super(newLength, newWidth);
-    }
+//    public Rectangle square(long side) {
+//        super(side, side);
+//    }
 }

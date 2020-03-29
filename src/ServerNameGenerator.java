@@ -17,6 +17,6 @@ public class ServerNameGenerator {
         String randoAdj = randomElement(adjectives);
         // Prints both randoms separated by a hyphen
         System.out.println("Here is your server name:");
-        System.out.printf("\t%s - %s",randoAdj,randoNoun);
+        System.out.printf("\t%s - %s", randoAdj, randoNoun);
     }
 }
