@@ -6,11 +6,13 @@ public class Square extends Rectangle {
         super(side, side);
     }
 
+    @Override
     public long getArea() {
         long side = this.width;
         return (long)Math.pow(side,2);
     }
 
+    @Override
     public long getPerimeter() {
         long side = this.length;
         return 4 * side;
