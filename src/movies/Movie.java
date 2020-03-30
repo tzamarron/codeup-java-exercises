@@ -54,12 +54,10 @@ public class Movie {
         for (Movie movie : movies){
             if (input.isNullOrEmpty(filter)){
                 System.out.printf(movieChart,movie.name,movie.category);
-                System.out.println("+-----------------------------------------------------------------+");
             }
             else {
                 if (movie.category.equals(filter)){
                     System.out.printf(movieChart,movie.name,movie.category);
-                    System.out.println("+-----------------------------------------------------------------+");
                 }
             }
         }
