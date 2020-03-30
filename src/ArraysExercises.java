@@ -21,15 +21,11 @@ public class ArraysExercises {
         // Creates new instance of Person and an array 3 long
         Person[] persons = new Person[3];
 
-        // Creates new person
-        Person student1 = new Person("Member 1");
-        Person student2 = new Person("Member 2");
-        Person student3 = new Person("Member 3");
+        // Creates new person and place into array
+        persons[0] = new Person("Member 1");
+        persons[1] = new Person("Member 2");
+        persons[2] = new Person("Member 3");
 
-        // Places new people into the array
-        persons[0] = student1;
-        persons[1] = student2;
-        persons[2] = student3;
 
         // Using a for enhanced for loop to print out
         // names of persons within array

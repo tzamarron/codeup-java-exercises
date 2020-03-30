@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class ServerNameGenerator {
 
     // Two new arrays
@@ -11,6 +13,12 @@ public class ServerNameGenerator {
         return array[ranNum];
     }
 
+    public static String getWord(String[]choices){
+        Random random = new Random();
+        String randWord = choices[random.nextInt(choices.length)];
+        return randWord;
+    }
+
     public static void main(String[] args) {
         // Generates random noun and adjective
         String randoNoun = randomElement(nouns);
@@ -18,5 +26,7 @@ public class ServerNameGenerator {
         // Prints both randoms separated by a hyphen
         System.out.println("Here is your server name:");
         System.out.printf("\t%s - %s", randoAdj, randoNoun);
+
+//        System.out.printf("\t %s_%s",getWord(adjectives),getWord(nouns));
     }
 }
