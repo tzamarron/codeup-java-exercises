@@ -62,9 +62,6 @@ public class GradesApplication {
             // Asks user what guild to get info on and records response
             int userInquires = test.getInt(0,counter-1,"What would you like to see?\n> ");
 
-            // Buffer
-//            System.out.println("");
-
             // Show information depending on input
             switch(userInquires){
                 case 0:
@@ -83,7 +80,6 @@ public class GradesApplication {
                     guildInfo(userInquires,students,l);
                     break;
             }
-
 
             // Ask user if they want to continue and set boolean value to boolean variable
             // will determine if loop continues or stops
@@ -127,4 +123,6 @@ public class GradesApplication {
             System.out.printf("\t%s, %s, %s, %.2f\n",guild,hashmap.get(guild).getName(),hashmap.get(guild).getGrades(),hashmap.get(guild).getGradeAverage());
         }
     }
+
+
 }
