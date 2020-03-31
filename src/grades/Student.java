@@ -31,6 +31,14 @@ public class Student {
         return (double) total / grades.size();
     };
 
+    public String getGrades(){
+        String allGrades = "";
+        for (Integer grade : grades){
+            allGrades += grade + " ";
+        }
+        return allGrades;
+    }
+
     public static void main(String[] args) {
         Student firstEnrolled = new Student("Una");
 

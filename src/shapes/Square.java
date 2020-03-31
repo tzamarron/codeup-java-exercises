@@ -1,13 +1,12 @@
 package shapes;
 
-public class Square extends Rectangle {
-//extends Quadrilateral
+public class Square extends Quadrilateral {
 
-    // Constructor for Square using parent constructor
-    public Square(long side) {
-        super(side, side);
-    }
-
+//    // Constructor for Square using parent constructor
+//    public Square(long side) {
+//        super(side, side);
+//    }
+//
 //    @Override
 //    public long getArea() {
 //        return (long)Math.pow(width,2);
@@ -19,27 +18,27 @@ public class Square extends Rectangle {
 //    }
 
 
-//    public Square(long side) {
-//        super(side, side);
-//    }
-//
-//    @Override
-//    public long setLength(long length) {
-//        return this.length = length;
-//    }
-//
-//    @Override
-//    public long setWidth(long width) {
-//        return this.width = width;
-//    }
-//
-//    @Override
-//    public long getPerimeter() {
-//        return length * 4;
-//    }
-//
-//    @Override
-//    public long getArea() {
-//        return (long) Math.pow(width,2);
-//    }
+    public Square(long side) {
+        super(side, side);
+    }
+
+    @Override
+    public long setLength(long length) {
+        return this.length = length;
+    }
+
+    @Override
+    public long setWidth(long width) {
+        return this.width = width;
+    }
+
+    @Override
+    public long getPerimeter() {
+        return length * 4;
+    }
+
+    @Override
+    public long getArea() {
+        return (long) Math.pow(width,2);
+    }
 }
