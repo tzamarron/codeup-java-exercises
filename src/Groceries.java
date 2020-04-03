@@ -4,7 +4,6 @@ import java.util.HashMap;
 public class Groceries {
     private ArrayList<HashMap<String,HashMap<String,Integer>>> groceryList;
 
-
     public Groceries() {
         this.groceryList = new ArrayList<>();
     }
@@ -28,4 +27,5 @@ class CateItems {
     public void setCateItems(HashMap<String, HashMap<String, Integer>> cateItems) {
         this.cateItems = cateItems;
     }
+
 }
