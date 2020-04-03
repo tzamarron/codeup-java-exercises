@@ -7,7 +7,7 @@ public class InputTest {
         Input test = new Input();
 //        System.out.println(test.getString());
 //        System.out.println(test.yesNo("Are you done?"));
-//        System.out.println(test.getInt());
+        System.out.println(test.getInt());
 //        System.out.println(test.getDouble());
 
 

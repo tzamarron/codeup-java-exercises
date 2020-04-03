@@ -54,7 +54,7 @@ public class Input {
         int userInt;
         try {
             userInt = Integer.parseInt(userResponse);
-        } catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.print("\tYou need to enter a Integer. Please try again\n");
             return getInt();
         }
@@ -67,7 +67,7 @@ public class Input {
         int userInt;
         try {
             userInt = Integer.parseInt(userResponse);
-        } catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.print("\tYou need to enter a Integer. Please try again\n");
             return getInt(prompt);
         }
@@ -80,6 +80,7 @@ public class Input {
     // integer
     public int getInt(int min, int max) {
         int userNumber = getInt();
+
         if (userNumber >= min && userNumber <= max) {
             return userNumber;
         } else {
@@ -110,7 +111,7 @@ public class Input {
         double userDouble;
         try {
             userDouble = Double.parseDouble(userResponse);
-        } catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.print("\tYou need to enter a Double. Please try again\n");
             return getDouble();
         }
@@ -124,7 +125,7 @@ public class Input {
         double userDouble;
         try {
             userDouble = Double.parseDouble(userResponse);
-        } catch (NumberFormatException nfe){
+        } catch (NumberFormatException nfe) {
             System.out.print("\tYou need to enter a Double. Please try again\n");
             return getDouble(prompt);
         }
@@ -154,7 +155,7 @@ public class Input {
             return userNumber;
         } else {
             System.out.printf("That is not a number between %f and %f\n", min, max);
-            return getDouble(min, max,prompt);
+            return getDouble(min, max, prompt);
         }
     }
 
