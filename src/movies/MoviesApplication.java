@@ -2,7 +2,7 @@ package movies;
 
 import util.Input;
 
-public class MovieApplication {
+public class MoviesApplication {
 
     public static void main(String[] args) {
         // New instances to allow access
