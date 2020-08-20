@@ -4,6 +4,8 @@
 # IntelliJ
 .idea/*
 *.iml
+Notes/*
+src/Notes/*
 
 # Compiled output
 *.class
